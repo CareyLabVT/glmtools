@@ -4,6 +4,7 @@
 #'@param fig_path F if plot to screen, string path if save plot as .png
 #'@param reference 'surface' or 'bottom'. Only used for heatmap plots.
 #' @param col_lim range for heatmap (in units of the variable)
+#'@param t_out 0 if full period, vector of dates if we want to pass to t_out
 #'@param ... additional arguments passed to \code{par()}
 #'@keywords methods
 #'@seealso \code{\link{get_temp}}, \code{\link{sim_var_longname}}, 
