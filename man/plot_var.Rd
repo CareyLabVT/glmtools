@@ -4,7 +4,7 @@
 \alias{plot_var}
 \title{Plot variables from a GLM simulation}
 \usage{
-plot_var(file = "output.nc", var_name, fig_path = FALSE,
+plot_var(file = "output.nc", var_name, t_out = 0, fig_path = FALSE,
   reference = "surface", col_lim, ...)
 }
 \arguments{
