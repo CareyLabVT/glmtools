@@ -1,15 +1,11 @@
 
-.plot_nc_heatmap <- function(file, var_name, reference, num_cells=100, palette, t_out=0 ...){
+.plot_nc_heatmap <- function(file, var_name, reference, num_cells=100, palette, ...){
   
   surface <- get_surface_height(file)
   max_depth <- max(surface[, 2])
   min_depth <- 0
-  z_out <- seq(min_depth, max_depth,length.out = num_cells) 
-  if (t_out == 0) {
-  	data <- get_var(file, z_out = z_out, var_name = var_name, reference = reference)
-  } else {
-	data <- get_var(file, z_out = z_out, var_name = var_name, reference = reference, t_out = t_out)
-  }
+  z_out <- seq(min_depth, max_depth,length.out = num_cells)
+  data <- get_var(file, z_out = z_out, var_name = var_name, reference = reference)
   title = .unit_label(file, var_name)
   .plot_df_heatmap(data, title, num_cells, palette, ...)
 }
