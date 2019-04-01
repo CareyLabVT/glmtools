@@ -1,5 +1,5 @@
 
-.plot_nc_heatmap <- function(file, var_name, reference, num_cells=100, palette, t_out=0, ...){
+.plot_nc_heatmap <- function(file, var_name, reference, num_cells=100, palette, t_out=0 ...){
   
   surface <- get_surface_height(file)
   max_depth <- max(surface[, 2])
